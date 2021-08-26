@@ -1,7 +1,6 @@
 module SnapError
   module Renderer
     extend ActiveSupport::Concern
-    include CustomErrors
 
     DEFAULT_ERROR_CODE = 0
     DEFAULT_ERROR_STATUS = :internal_server_error
