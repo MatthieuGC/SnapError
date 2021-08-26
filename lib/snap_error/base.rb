@@ -1,5 +1,5 @@
 module SnapError
-  class Base
+  module Base
     attr_reader :snap_status
 
     ERROR_SUFFIXES = {}
