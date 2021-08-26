@@ -1,8 +1,6 @@
 # SnapError
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/snap_error`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+SnapError has been made to unify error management between backend and frontend within all our apps/services.
 
 ## Installation
 
@@ -12,14 +10,13 @@ Add this line to your application's Gemfile:
 gem 'snap_error'
 ```
 
-And then execute:
+Then execute:
 
     $ bundle install
 
-Or install it yourself as:
+Finally install the gem by running:
 
-    $ gem install snap_error
-
+    $ rails g snap_error:install
 ## Usage
 
 TODO: Write usage instructions here

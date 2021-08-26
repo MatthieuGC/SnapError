@@ -1,6 +1,15 @@
-require "snap_error/version"
+require 'snap_error/version'
+require 'snap_error/base'
+require 'ostruct'
 
 module SnapError
-  class Error < StandardError; end
-  # Your code goes here...
+  class << self
+    def configuration
+      @configuration ||= OpenStruct.new
+    end
+
+    def configure
+      yield(configuration)
+    end
+  end
 end
