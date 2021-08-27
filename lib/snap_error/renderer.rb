@@ -1,7 +1,5 @@
 module SnapError
   module Renderer
-    extend ActiveSupport::Concern
-
     def self.included(klass)
       klass.class_eval do
         rescue_from Exception do |e|
