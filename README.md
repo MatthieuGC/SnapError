@@ -19,8 +19,11 @@ Finally install the gem by running:
     $ rails g snap_error:install
 ## Usage
 
-TODO: Write usage instructions here
+In your ApplicationController add:
 
+    $ include SnapError::Renderer
+
+You're now ready to customize custom errors' code and status in `config/initializers/snap_error.rb`!
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
