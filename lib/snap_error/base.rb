@@ -6,9 +6,9 @@ module SnapError
 
     def initialize(*args)
       @snap_status =
-        begin
+        if self.class.const_defined?(:SNAP_STATUS)
           self.class::SNAP_STATUS
-        rescue
+        else
           SnapError.configuration.default_http_status
         end
 
@@ -18,9 +18,9 @@ module SnapError
     def snap_code
       suffix = self.class::ERROR_SUFFIXES.find { |k, v| message.match?(k) }&.last
       snap_code =
-        begin
+        if self.class.const_defined?(:SNAP_CODE)
           self.class::SNAP_CODE
-        rescue
+        else
           SnapError.configuration.default_error_code
         end
 
